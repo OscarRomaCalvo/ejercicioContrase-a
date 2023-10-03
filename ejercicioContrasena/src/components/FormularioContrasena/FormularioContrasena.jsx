@@ -13,6 +13,9 @@ function FormularioContrasena(){
         puntuacion += checkLongitud()
         puntuacion += checkCaracteres()
 
+        if (puntuacion===9)
+            puntuacion+=1
+
         window.alert(puntuacion)
         event.preventDefault()
     }
@@ -47,7 +50,7 @@ function FormularioContrasena(){
     }
 
     function checkEspeciales(){
-        return 0
+            return 0
     }
 
     function checkCaracteres(){
