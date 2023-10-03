@@ -30,19 +30,20 @@ function FormularioContrasena(){
     }
     
     function checkLetras(){
-        const mayusculas = /A-Z]/
-        const minusculas = /[a-z]/
-
-        if(mayusculas.test(password) && minusculas.test(password))
+        
+        if(/[A-Z]/.test(password) && /[a-z]/.test(password))
             return 2
-        else if(mayusculas.test(password) || minusculas.test(password))
+        else if(/[A-Z]/.test(password) || /[a-z]/.test(password))
             return 1
         else 
             return 0
     }
 
     function checkNumeros(){
-        return 0
+        if(/[0-9]/.test(password))
+            return 1
+        else
+            return 0
     }
 
     function checkEspeciales(){
