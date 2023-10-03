@@ -35,7 +35,7 @@ function FormularioContrasena(){
     function checkLetras(){
         
         if(/[A-Z]/.test(password) && /[a-z]/.test(password))
-            return 2
+            return 3
         else if(/[A-Z]/.test(password) || /[a-z]/.test(password))
             return 1
         else 
@@ -50,6 +50,9 @@ function FormularioContrasena(){
     }
 
     function checkEspeciales(){
+        if(/[^a-zA-Z0-9]/.test(password))
+            return 2
+        else 
             return 0
     }
 
